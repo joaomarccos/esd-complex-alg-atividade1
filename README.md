@@ -1,5 +1,6 @@
-# esd-complex-alg-atividade1
-Projeto para atividade 1 da Disciplina de Estrutura de Dados e Complexidade de Algoritmos
+# PROGRAMA DE PÓS-GRADUAÇÃO EM INFORMÁTICA UFPB
+
+Projeto para Atividade Ordenação 1 da Disciplina de Estrutura de Dados e Complexidade de Algoritmos
 
 ## Requirements
   - JDK 11
