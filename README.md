@@ -1,4 +1,4 @@
-# PROGRAMA DE PÓS-GRADUAÇÃO EM INFORMÁTICA UFPB
+# ESD Atividade 1
 
 Projeto para Atividade Ordenação 1 da Disciplina de Estrutura de Dados e Complexidade de Algoritmos
 
