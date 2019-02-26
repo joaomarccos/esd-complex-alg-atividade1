@@ -9,7 +9,7 @@ Project for **Atividade Ordenação 1** from class **Estrutura de Dados e Comple
 ## Steps to..
 
 ### Test
-    - mvn test
+     mvn test
     
 ### Create executable
      mvn install
