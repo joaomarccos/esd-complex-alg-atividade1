@@ -14,7 +14,7 @@ Project for class **Estrutura de Dados e Complexidade de Algoritmos**
 ### Create executable
      mvn install
     
-###Run (from root folder)
+### Run (from root folder)
     java -jar main/target/sorter.jar < main/src/main/resources/instancias-num/num.1000.1.in
 
 #### Notes
