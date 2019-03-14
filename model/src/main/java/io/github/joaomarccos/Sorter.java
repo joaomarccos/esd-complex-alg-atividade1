@@ -1,5 +1,6 @@
 package io.github.joaomarccos;
 
+import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
 public abstract class Sorter<T extends Comparable<T>> {
