@@ -9,10 +9,10 @@ class QuickSortTest {
 
     @Test
     void sort() {
-        var arr = new Integer[]{2, 1, 5};
+        var arr = new Integer[]{3, 1, 2};
         var sorter = new QuickSort<Integer>();
         sorter.sort(arr);
-        assertArrayEquals(new Integer[]{1, 2, 5}, arr);
+        assertArrayEquals(new Integer[]{1, 2, 3}, arr);
     }
 
     @Test

@@ -58,8 +58,10 @@ public abstract class Sorter<T extends Comparable<T>> {
      * @param index2 - index 2
      */
     void swap(T[] array, int index1, int index2) {
-        var aux = array[index2];
-        array[index2] = array[index1];
-        array[index1] = aux;
+        if(index1 != index2){
+            var aux = array[index2];
+            array[index2] = array[index1];
+            array[index1] = aux;
+        }
     }
 }

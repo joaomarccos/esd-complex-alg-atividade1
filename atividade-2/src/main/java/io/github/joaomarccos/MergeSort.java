@@ -25,22 +25,22 @@ public class MergeSort<T extends Comparable<T>> extends Sorter<T> {
         var rightArray = Arrays.copyOfRange(array, middle + 1, end + 1);
 
         int i = 0, j = 0;
-        var index = start;
+        var cursor = start;
 
-        while (i < (middle + 1) - start && j < end - middle) {
+        while (i < leftArray.length && j < rightArray.length) {
             if (isSmaller(leftArray[i], rightArray[j])) {
-                array[index++] = leftArray[i++];
+                array[cursor++] = leftArray[i++];
             } else {
-                array[index++] = rightArray[j++];
+                array[cursor++] = rightArray[j++];
             }
         }
 
-        while (i < (middle + 1) - start) {
-            array[index++] = leftArray[i++];
+        while (i < leftArray.length) {
+            array[cursor++] = leftArray[i++];
         }
 
-        while (j < end - middle) {
-            array[index++] = rightArray[j++];
+        while (j < rightArray.length) {
+            array[cursor++] = rightArray[j++];
         }
 
     }
