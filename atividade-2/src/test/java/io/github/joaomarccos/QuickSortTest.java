@@ -1,18 +1,18 @@
-package joaomarccos;
+package io.github.joaomarccos;
 
-import io.github.joaomarccos.MergeSort;
+import io.github.joaomarccos.QuickSort;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-class MergeSortTest {
+class QuickSortTest {
 
     @Test
     void sort() {
-        var arr = new Integer[]{5, 2, 1, 1, 9};
-        var sorter = new MergeSort<Integer>();
+        var arr = new Integer[]{3, 1, 2};
+        var sorter = new QuickSort<Integer>();
         sorter.sort(arr);
-        assertArrayEquals(new Integer[]{1, 1, 2, 5, 9}, arr);
+        assertArrayEquals(new Integer[]{1, 2, 3}, arr);
     }
 
     @Test
@@ -23,7 +23,7 @@ class MergeSortTest {
                 9661, 4536, 2770, 8200, 1556, 1217, 3729, 4909, 3732, 7897, 4695, 1353, 6836, 7024, 4457, 829, 2620, 3691, 3165, 9706, 3142,
                 186, 8640, 8617, 9544, 1880, 7180, 8272, 2233, 5874, 3406, 7216, 8736, 409, 2498, 6316, 8398, 2721, 3959};
 
-        var sorter = new MergeSort<Integer>();
+        var sorter = new QuickSort<Integer>();
         sorter.sort(arr);
 
         assertArrayEquals(new Integer[]{61, 130, 186, 402, 409, 473, 504, 703, 829, 916, 1003, 1217, 1353, 1382, 1500,

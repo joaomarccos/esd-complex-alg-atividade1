@@ -1,18 +1,34 @@
-package joaomarccos;
+package io.github.joaomarccos;
 
-import io.github.joaomarccos.QuickSort;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-class QuickSortTest {
+class HeapSortTest {
+
+    @Test
+    void maxHeapify() {
+        var arr = new Integer[]{23, 17, 14, 6, 13, 10, 15, 7};
+        var sorter = new HeapSort<Integer>();
+        sorter.maxHeapify(arr, 3, arr.length);
+        sorter.maxHeapify(arr, 2, arr.length);
+        assertArrayEquals(new Integer[]{23, 17, 15, 7, 13, 10, 14, 6}, arr);
+    }
+
+    @Test
+    void buildMaxheap(){
+        var arr = new Integer[]{23, 17, 14, 6, 13, 10, 15, 7};
+        var sorter = new HeapSort<Integer>();
+        sorter.buildMaxHeap(arr);
+        assertArrayEquals(new Integer[]{23, 17, 15, 7, 13, 10, 14, 6}, arr);
+    }
 
     @Test
     void sort() {
-        var arr = new Integer[]{3, 1, 2};
-        var sorter = new QuickSort<Integer>();
+        var arr = new Integer[]{5, 2, 1, 1, 9};
+        var sorter = new HeapSort<Integer>();
         sorter.sort(arr);
-        assertArrayEquals(new Integer[]{1, 2, 3}, arr);
+        assertArrayEquals(new Integer[]{1, 1, 2, 5, 9}, arr);
     }
 
     @Test
@@ -23,7 +39,7 @@ class QuickSortTest {
                 9661, 4536, 2770, 8200, 1556, 1217, 3729, 4909, 3732, 7897, 4695, 1353, 6836, 7024, 4457, 829, 2620, 3691, 3165, 9706, 3142,
                 186, 8640, 8617, 9544, 1880, 7180, 8272, 2233, 5874, 3406, 7216, 8736, 409, 2498, 6316, 8398, 2721, 3959};
 
-        var sorter = new QuickSort<Integer>();
+        var sorter = new HeapSort<Integer>();
         sorter.sort(arr);
 
         assertArrayEquals(new Integer[]{61, 130, 186, 402, 409, 473, 504, 703, 829, 916, 1003, 1217, 1353, 1382, 1500,
