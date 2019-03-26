@@ -1,6 +1,5 @@
 package io.github.joaomarccos;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class CountingSort<T extends AsNumber> extends Sorter<T> {
@@ -8,12 +7,14 @@ public class CountingSort<T extends AsNumber> extends Sorter<T> {
     @Override
     void sort(T[] array) {
         var max = max(array);
+        var offset = Math.abs(min(array)) + 1;
+
         var copy = Arrays.copyOf(array, array.length);
-        var countingArr = new int[max];
+        var countingArr = new int[max + offset];
         Arrays.fill(countingArr, 0);
 
         for (T t : copy) {
-            countingArr[t.intValue() - 1]++;
+            countingArr[offset + t.intValue() - 1]++;
         }
 
         for (var i = 1; i < countingArr.length; i++) {
@@ -21,7 +22,7 @@ public class CountingSort<T extends AsNumber> extends Sorter<T> {
         }
 
         for (var i = copy.length - 1; i >= 0; i--) {
-            array[--countingArr[copy[i].intValue() - 1]] = copy[i];
+            array[--countingArr[offset + copy[i].intValue() - 1]] = copy[i];
         }
     }
 

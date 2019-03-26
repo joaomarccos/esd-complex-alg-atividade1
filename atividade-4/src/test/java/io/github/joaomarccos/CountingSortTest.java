@@ -12,12 +12,12 @@ class CountingSortTest {
 
     @Test
     void sort() {
-        Integer[] array = {5, 2, 1, 1, 9};
+        Integer[] array = {5, 2, -1, 1, -1, -17, 9};
         var arr = getArr(array);
 
         var sorter = new CountingSort();
         sorter.sort(arr);
-        assertArrayEquals(new Integer[]{1, 1, 2, 5, 9}, Arrays.stream(arr).map(AsNumber::intValue).toArray());
+        assertArrayEquals(new Integer[]{-17, -1, -1, 1, 2, 5, 9}, Arrays.stream(arr).map(AsNumber::intValue).toArray());
     }
 
     private AsNumber[] getArr(Integer[] array) {
