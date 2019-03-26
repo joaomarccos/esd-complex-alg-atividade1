@@ -13,26 +13,13 @@ class CountingSortTest {
     @Test
     void sort() {
         Integer[] array = {5, 2, -1, 1, -1, -17, 9};
-        var arr = getArr(array);
+        var arr = Util.getArr(array);
 
         var sorter = new CountingSort();
         sorter.sort(arr);
         assertArrayEquals(new Integer[]{-17, -1, -1, 1, 2, 5, 9}, Arrays.stream(arr).map(AsNumber::intValue).toArray());
     }
 
-    private AsNumber[] getArr(Integer[] array) {
-        return Arrays.stream(array).map(a -> new AsNumber() {
-            @Override
-            public int intValue() {
-                return a;
-            }
-
-            @Override
-            public int compareTo(Integer o) {
-                return a.compareTo(o);
-            }
-        }).collect(Collectors.toList()).toArray(new AsNumber[]{});
-    }
 
     @Test
     void sortLongList() {
@@ -41,7 +28,7 @@ class CountingSortTest {
                 2376, 5690, 1003, 473, 7802, 61, 6651, 916, 7815, 130, 2686, 3639, 9614, 504, 7893, 2549, 5241, 1382, 8366, 6205, 4146, 6690,
                 9661, 4536, 2770, 8200, 1556, 1217, 3729, 4909, 3732, 7897, 4695, 1353, 6836, 7024, 4457, 829, 2620, 3691, 3165, 9706, 3142,
                 186, 8640, 8617, 9544, 1880, 7180, 8272, 2233, 5874, 3406, 7216, 8736, 409, 2498, 6316, 8398, 2721, 3959};
-        var arr = getArr(array);
+        var arr = Util.getArr(array);
 
         var sorter = new CountingSort();
         sorter.sort(arr);

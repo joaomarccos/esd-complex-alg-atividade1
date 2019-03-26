@@ -63,4 +63,6 @@ public abstract class Sorter<T extends Comparable>{
             array[index1] = aux;
         }
     }
+
+
 }
