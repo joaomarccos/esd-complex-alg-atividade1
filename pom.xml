@@ -15,6 +15,7 @@
         <module>model</module>
         <module>atividade-2</module>
         <module>atividade-3</module>
+        <module>atividade-4</module>
     </modules>
 
     <dependencies>
